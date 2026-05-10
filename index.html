@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jordan Lane — Reel & Portfolio</title>
+<meta name="description" content="Selected work — sizzle reels, brand films, and creative direction." />
+<meta property="og:title" content="Jordan Lane — Reel & Portfolio" />
+<meta property="og:description" content="Selected work — sizzle reels, brand films, and creative direction." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
 :root {
   --bg: #0a0a0a;
   --bg-card: #181818;
@@ -11,11 +25,8 @@
   --max-w: 1280px;
   --pad: clamp(20px, 4vw, 56px);
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -24,20 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
 a { color: inherit; text-decoration: none; }
-
-/* NAV */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -52,7 +50,6 @@ nav {
   transition: border-color 0.3s;
 }
 nav.scrolled { border-bottom-color: var(--border); }
-
 .brand {
   font-family: var(--serif);
   font-weight: 500;
@@ -60,7 +57,6 @@ nav.scrolled { border-bottom-color: var(--border); }
   letter-spacing: -0.02em;
 }
 .brand span { color: var(--accent); }
-
 .nav-links {
   display: flex;
   gap: 28px;
@@ -76,22 +72,9 @@ nav.scrolled { border-bottom-color: var(--border); }
   position: relative;
 }
 .nav-links a:hover { color: var(--text); }
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: -6px;
-  height: 1px;
-  width: 0;
-  background: var(--accent);
-  transition: width 0.3s;
-}
-.nav-links a:hover::after { width: 100%; }
-
 @media (max-width: 640px) {
   .nav-links { gap: 14px; font-size: 11px; }
 }
-
-/* HERO */
 .hero {
   min-height: 100vh;
   padding: 120px var(--pad) 80px;
@@ -102,7 +85,6 @@ nav.scrolled { border-bottom-color: var(--border); }
   max-width: var(--max-w);
   margin: 0 auto;
 }
-
 .hero-eyebrow {
   font-size: 12px;
   text-transform: uppercase;
@@ -119,7 +101,6 @@ nav.scrolled { border-bottom-color: var(--border); }
   height: 1px;
   background: var(--accent);
 }
-
 .hero h1 {
   font-family: var(--serif);
   font-weight: 300;
@@ -133,7 +114,6 @@ nav.scrolled { border-bottom-color: var(--border); }
   font-weight: 400;
   color: var(--accent);
 }
-
 .hero-tagline {
   font-size: clamp(17px, 1.6vw, 22px);
   color: var(--text-dim);
@@ -141,7 +121,6 @@ nav.scrolled { border-bottom-color: var(--border); }
   line-height: 1.5;
   margin-bottom: 48px;
 }
-
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -161,42 +140,11 @@ nav.scrolled { border-bottom-color: var(--border); }
   font-weight: 400;
   margin-top: 6px;
 }
-
-.scroll-cue {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  color: var(--text-faint);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  animation: float 2.4s ease-in-out infinite;
-}
-.scroll-cue::after {
-  content: "";
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--text-faint), transparent);
-}
-@keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
-}
-
-/* SECTIONS */
 section {
   padding: 120px var(--pad);
   max-width: var(--max-w);
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
-
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -224,20 +172,16 @@ section {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-
-/* REELS */
 .reels-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 40px 32px;
 }
-
 .reel {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .reel-frame {
   position: relative;
   aspect-ratio: 16/9;
@@ -250,7 +194,6 @@ section {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
-
 .reel-frame iframe {
   position: absolute;
   inset: 0;
@@ -258,7 +201,6 @@ section {
   height: 100%;
   border: 0;
 }
-
 .reel-meta {
   display: flex;
   justify-content: space-between;
@@ -266,14 +208,12 @@ section {
   gap: 16px;
   padding-top: 4px;
 }
-
 .reel-title {
   font-family: var(--serif);
   font-weight: 400;
   font-size: 20px;
   letter-spacing: -0.01em;
 }
-
 .reel-tag {
   font-size: 11px;
   text-transform: uppercase;
@@ -281,8 +221,6 @@ section {
   color: var(--text-faint);
   white-space: nowrap;
 }
-
-/* FEATURED REEL (Poosh) */
 .featured-reel {
   max-width: 1000px;
   margin: 0 auto;
@@ -293,8 +231,6 @@ section {
 .featured-reel .reel-title {
   font-size: 28px;
 }
-
-/* PHOTO */
 .feature-photo {
   width: 100%;
   border: 1px solid var(--border);
@@ -306,8 +242,6 @@ section {
   height: auto;
   display: block;
 }
-
-/* ABOUT */
 .about-wrap {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -317,7 +251,6 @@ section {
 @media (max-width: 900px) {
   .about-wrap { grid-template-columns: 1fr; gap: 40px; }
 }
-
 .about-label {
   font-size: 12px;
   text-transform: uppercase;
@@ -327,7 +260,6 @@ section {
   border-top: 1px solid var(--accent);
   display: inline-block;
 }
-
 .about-body p {
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.55;
@@ -335,7 +267,6 @@ section {
   font-weight: 300;
 }
 .about-body p:last-child { color: var(--text-dim); }
-
 .clients {
   margin-top: 56px;
   padding-top: 40px;
@@ -361,8 +292,6 @@ section {
   margin-left: 28px;
   color: var(--accent);
 }
-
-/* CONTACT */
 .contact {
   text-align: center;
   padding: 160px var(--pad);
@@ -379,7 +308,6 @@ section {
   font-style: italic;
   color: var(--accent);
 }
-
 .contact-email {
   font-family: var(--serif);
   font-size: clamp(22px, 3vw, 36px);
@@ -392,8 +320,6 @@ section {
   border-color: var(--accent);
   color: var(--accent);
 }
-
-/* FOOTER */
 footer {
   border-top: 1px solid var(--border);
   padding: 32px var(--pad);
@@ -407,8 +333,6 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
 }
-
-/* REVEAL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -418,3 +342,146 @@ footer {
   opacity: 1;
   transform: none;
 }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="brand">JL<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#reels">Sizzles</a></li>
+    <li><a href="#poosh">Poosh</a></li>
+    <li><a href="#photos">Photo</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-eyebrow">Selected Work · 2021 — 2026</div>
+  <h1>Stories that <em>move</em>.</h1>
+  <p class="hero-tagline">Sizzle reels, brand films, and creative direction for entertainment, sports, and global brands.</p>
+  <div class="hero-meta">
+    <div>Based in <strong>Philadelphia</strong></div>
+    <div>Discipline <strong>Editorial · Sizzle · Brand</strong></div>
+  </div>
+</header>
+
+<section id="reels">
+  <div class="section-header reveal">
+    <h2>Comcast <em>Sizzles</em></h2>
+    <div class="section-num">01 / Work</div>
+  </div>
+  <div class="reels-grid">
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190464146" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">Wicked — Pt. 1</div><div class="reel-tag">Universal</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190482582" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">Wicked — For Good</div><div class="reel-tag">Universal</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190476313" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">NBA on NBC &amp; Peacock</div><div class="reel-tag">NBC Sports</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190466038" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">Paris Olympics 2024</div><div class="reel-tag">Comcast</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190480503" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">WWE × Bianca Belair</div><div class="reel-tag">WWE</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190482407" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">VOICES — Comcast TEDx</div><div class="reel-tag">Comcast</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190463711" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. I</div><div class="reel-tag">Comcast</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190464017" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. II</div><div class="reel-tag">Comcast</div></div>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190465981" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="reel-meta"><div class="reel-title">Comcast Converge</div><div class="reel-tag">Comcast</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="poosh">
+  <div class="section-header reveal">
+    <h2><em>Poosh</em>.</h2>
+    <div class="section-num">02 / Brand</div>
+  </div>
+  <div class="featured-reel reveal">
+    <div class="reel-frame"><iframe src="https://www.youtube.com/embed/Naq6X0f5GC4" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="reel-meta"><div class="reel-title">Poosh × Kourtney Kardashian</div><div class="reel-tag">Brand · Lifestyle</div></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="section-header reveal">
+    <h2>From the <em>set</em>.</h2>
+    <div class="section-num">03 / Photo</div>
+  </div>
+  <div class="feature-photo reveal">
+    <img src="images/1000-0330-lowres.jpg" alt="On set" />
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header reveal">
+    <h2><em>About</em>.</h2>
+    <div class="section-num">04 / Bio</div>
+  </div>
+  <div class="about-wrap">
+    <div class="reveal"><div class="about-label">Who · What · Why</div></div>
+    <div class="about-body reveal">
+      <p>I'm a creative working at the intersection of brand, sport, and entertainment — building sizzle reels and brand films that earn attention and hold it.</p>
+      <p>Recent work spans theatrical campaigns, league-level sports launches, and global enterprise storytelling — from <em>Wicked</em> to the NBA's return to NBC to the Paris Olympics. I care most about pacing, taste, and the cut that makes a room lean in.</p>
+      <div class="clients">
+        <div class="clients-label">Work Experience</div>
+        <div class="clients-list">
+          <span>Comcast NBCUniversal</span>
+          <span>Poosh</span>
+          <span>MrBeast Reacts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="reveal">Let's <em>make</em> something.</h2>
+  <a href="mailto:jordanlane.2026@gmail.com" class="contact-email reveal">jordanlane.2026@gmail.com</a>
+</section>
+
+<footer>
+  <div>© 2026 Jordan Lane</div>
+  <div>Built with care</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
