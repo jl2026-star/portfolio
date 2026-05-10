@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Jordan Lane — Reel & Portfolio</title>
-<meta name="description" content="Selected work — sizzle reels, brand films, and creative direction." />
+<meta name="description" content="Creative content producer — sizzle reels, brand films, and the digital asset systems that scale them." />
 <meta property="og:title" content="Jordan Lane — Reel & Portfolio" />
-<meta property="og:description" content="Selected work — sizzle reels, brand films, and creative direction." />
+<meta property="og:description" content="Creative content producer — sizzle reels, brand films, and the digital asset systems that scale them." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -107,7 +107,7 @@ nav.scrolled { border-bottom-color: var(--border); }
   font-size: clamp(56px, 11vw, 168px);
   line-height: 0.92;
   letter-spacing: -0.04em;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .hero h1 em {
   font-style: italic;
@@ -117,9 +117,13 @@ nav.scrolled { border-bottom-color: var(--border); }
 .hero-tagline {
   font-size: clamp(17px, 1.6vw, 22px);
   color: var(--text-dim);
-  max-width: 620px;
+  max-width: 680px;
   line-height: 1.5;
   margin-bottom: 48px;
+}
+.hero-tagline em {
+  font-style: italic;
+  color: var(--text);
 }
 .hero-meta {
   display: flex;
@@ -139,6 +143,25 @@ nav.scrolled { border-bottom-color: var(--border); }
   font-size: 15px;
   font-weight: 400;
   margin-top: 6px;
+}
+.hero-credits {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 2;
+  max-width: 900px;
+}
+.hero-credits strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-size: 17px;
 }
 section {
   padding: 120px var(--pad);
@@ -177,11 +200,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 40px 32px;
 }
-.reel {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+.reel { display: flex; flex-direction: column; gap: 16px; }
 .reel-frame {
   position: relative;
   aspect-ratio: 16/9;
@@ -221,16 +240,9 @@ section {
   color: var(--text-faint);
   white-space: nowrap;
 }
-.featured-reel {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.featured-reel .reel-frame {
-  margin-bottom: 24px;
-}
-.featured-reel .reel-title {
-  font-size: 28px;
-}
+.featured-reel { max-width: 1000px; margin: 0 auto; }
+.featured-reel .reel-frame { margin-bottom: 24px; }
+.featured-reel .reel-title { font-size: 28px; }
 .feature-photo {
   width: 100%;
   border: 1px solid var(--border);
@@ -266,36 +278,62 @@ section {
   margin-bottom: 24px;
   font-weight: 300;
 }
-.about-body p:last-child { color: var(--text-dim); }
-.clients {
+.about-body p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.about-body p em {
+  font-style: italic;
+  color: var(--accent);
+}
+.about-body p:last-of-type { color: var(--text-dim); }
+.experience {
   margin-top: 56px;
   padding-top: 40px;
   border-top: 1px solid var(--border);
 }
-.clients-label {
+.experience-label {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: var(--text-faint);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
-.clients-list {
+.experience-list {
   display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.experience-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px dotted var(--border);
   flex-wrap: wrap;
-  gap: 12px 28px;
+}
+.experience-row:last-child { border-bottom: none; }
+.experience-company {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 19px;
+  color: var(--text);
+}
+.experience-role {
+  font-size: 13px;
   color: var(--text-dim);
+  flex: 1;
+  margin-left: 16px;
 }
-.clients-list span:not(:last-child)::after {
-  content: "·";
-  margin-left: 28px;
-  color: var(--accent);
+.experience-dates {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-faint);
+  font-feature-settings: "tnum";
+  white-space: nowrap;
 }
-.contact {
-  text-align: center;
-  padding: 160px var(--pad);
-}
+.contact { text-align: center; padding: 160px var(--pad); }
 .contact h2 {
   font-family: var(--serif);
   font-weight: 300;
@@ -304,10 +342,7 @@ section {
   line-height: 1;
   margin-bottom: 32px;
 }
-.contact h2 em {
-  font-style: italic;
-  color: var(--accent);
-}
+.contact h2 em { font-style: italic; color: var(--accent); }
 .contact-email {
   font-family: var(--serif);
   font-size: clamp(22px, 3vw, 36px);
@@ -316,10 +351,7 @@ section {
   transition: border-color 0.3s, color 0.3s;
   display: inline-block;
 }
-.contact-email:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+.contact-email:hover { border-color: var(--accent); color: var(--accent); }
 footer {
   border-top: 1px solid var(--border);
   padding: 32px var(--pad);
@@ -338,10 +370,7 @@ footer {
   transform: translateY(24px);
   transition: opacity 0.9s, transform 0.9s;
 }
-.reveal.in {
-  opacity: 1;
-  transform: none;
-}
+.reveal.in { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
@@ -360,11 +389,19 @@ footer {
 <header class="hero" id="top">
   <div class="hero-eyebrow">Selected Work · 2021 — 2026</div>
   <h1>Stories that <em>move</em>.</h1>
-  <p class="hero-tagline">Sizzle reels, brand films, and creative direction for entertainment, sports, and global brands.</p>
+  <p class="hero-tagline">And the systems that <em>move them</em> — sizzle reels, brand films, and social cuts for entertainment, sports, and global brands.</p>
   <div class="hero-meta">
     <div>Based in <strong>Philadelphia</strong></div>
-    <div>Discipline <strong>Editorial · Sizzle · Brand</strong></div>
+    <div>Discipline <strong>Editorial · Production · Asset Systems</strong></div>
   </div>
+  <p class="hero-credits">
+    Productions featuring
+    <strong>Barack Obama</strong> ·
+    <strong>Simone Biles</strong> ·
+    <strong>Jalen Hurts</strong> ·
+    <strong>Bianca Belair</strong> ·
+    <strong>Kourtney Kardashian</strong>
+  </p>
 </header>
 
 <section id="reels">
@@ -419,7 +456,7 @@ footer {
   </div>
   <div class="featured-reel reveal">
     <div class="reel-frame"><iframe src="https://www.youtube.com/embed/Naq6X0f5GC4" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <div class="reel-meta"><div class="reel-title">Poosh × Kourtney Kardashian</div><div class="reel-tag">Brand · Lifestyle</div></div>
+    <div class="reel-meta"><div class="reel-title">Poosh × Kourtney Kardashian</div><div class="reel-tag">3.3M+ views</div></div>
   </div>
 </section>
 
@@ -441,14 +478,40 @@ footer {
   <div class="about-wrap">
     <div class="reveal"><div class="about-label">Who · What · Why</div></div>
     <div class="about-body reveal">
-      <p>I'm a creative working at the intersection of brand, sport, and entertainment — building sizzle reels and brand films that earn attention and hold it.</p>
-      <p>Recent work spans theatrical campaigns, league-level sports launches, and global enterprise storytelling — from <em>Wicked</em> to the NBA's return to NBC to the Paris Olympics. I care most about pacing, taste, and the cut that makes a room lean in.</p>
-      <div class="clients">
-        <div class="clients-label">Work Experience</div>
-        <div class="clients-list">
-          <span>Comcast NBCUniversal</span>
-          <span>Poosh</span>
-          <span>MrBeast Reacts</span>
+      <p>There's the cut. And there's the system that keeps the cut findable. Most people pick one. <em>I do both</em> — and as far as I'm concerned, that's the whole job.</p>
+      <p>Four years at Comcast NBCUniversal. I lead creative on the company's TEDx-style speaker series, edit 200+ pieces a year, and produce social content across 20+ partner channels — <strong>597K+ impressions, 15K+ monthly views.</strong> On stage and on camera: <strong>Barack Obama, Simone Biles, Jalen Hurts, Bianca Belair.</strong> On the back end: <strong>1M+ assets</strong> across Iconik and LucidLink, plus the AI-tagged metadata framework I built that cut team search time by <strong>20%.</strong></p>
+      <p>Before Philly: cut Kourtney Kardashian's <em>Poosh</em> (<strong>3.3M+ views</strong>), TLC, Big Lots, Saktii, CreatorsTV.</p>
+      <p>What I care about: pacing in the cut, restraint in the type, and the unglamorous work that lets a creative team move fast — and find what they made two years ago.</p>
+      <p>Ohio State · B.S. Moving Image Production · Dean's List · Charles Newirth Scholar.</p>
+
+      <div class="experience">
+        <div class="experience-label">Experience</div>
+        <div class="experience-list">
+          <div class="experience-row">
+            <div class="experience-company">Comcast NBCUniversal</div>
+            <div class="experience-role">Production Assistant · Philadelphia</div>
+            <div class="experience-dates">2022 — Present</div>
+          </div>
+          <div class="experience-row">
+            <div class="experience-company">Saktii</div>
+            <div class="experience-role">Video Editor &amp; Graphic Designer · Los Angeles</div>
+            <div class="experience-dates">2021 — 2022</div>
+          </div>
+          <div class="experience-row">
+            <div class="experience-company">Big Lots &amp; TLC</div>
+            <div class="experience-role">Freelance Editor &amp; Production Assistant · Columbus</div>
+            <div class="experience-dates">2021 — 2022</div>
+          </div>
+          <div class="experience-row">
+            <div class="experience-company">Poosh</div>
+            <div class="experience-role">Social Media Video Editor · Los Angeles</div>
+            <div class="experience-dates">2021 — 2022</div>
+          </div>
+          <div class="experience-row">
+            <div class="experience-company">CreatorsTV</div>
+            <div class="experience-role">Pre &amp; Post Production Intern · New York</div>
+            <div class="experience-dates">2020 — 2021</div>
+          </div>
         </div>
       </div>
     </div>
