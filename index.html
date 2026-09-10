@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jordan Lane — Creative Content Producer</title>
-<meta name="description" content="Jordan Lane — creative content producer. Sizzle reels, brand films, and the systems that scale them. Comcast NBCUniversal." />
-<meta property="og:title" content="Jordan Lane — Creative Content Producer" />
-<meta property="og:description" content="Sizzle reels, brand films, and the systems that scale them. Comcast NBCUniversal." />
+<title>Jordan Lane — Content & Programming Producer</title>
+<meta name="description" content="Jordan Lane — content and programming producer. Series, slates, and the systems behind them." />
+<meta property="og:title" content="Jordan Lane — Content & Programming Producer" />
+<meta property="og:description" content="Content and programming for entertainment, sports, and brand." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,7 +59,7 @@ nav.scrolled { border-bottom-color: var(--border); }
 .brand span { color: var(--accent); }
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 26px;
   list-style: none;
   font-size: 13px;
   text-transform: uppercase;
@@ -73,11 +73,11 @@ nav.scrolled { border-bottom-color: var(--border); }
 .nav-links a:hover { color: var(--text); }
 @media (max-width: 640px) {
   .brand { font-size: 17px; }
-  .nav-links { gap: 12px; font-size: 10px; letter-spacing: 0.1em; }
+  .nav-links { gap: 10px; font-size: 10px; letter-spacing: 0.1em; }
 }
 .hero {
   min-height: 100vh;
-  padding: 120px var(--pad) 80px;
+  padding: 120px var(--pad) 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,12 +119,9 @@ nav.scrolled { border-bottom-color: var(--border); }
   color: var(--text-dim);
   max-width: 680px;
   line-height: 1.5;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
-.hero-tagline em {
-  font-style: italic;
-  color: var(--text);
-}
+.hero-tagline em { font-style: italic; color: var(--text); }
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -145,8 +142,8 @@ nav.scrolled { border-bottom-color: var(--border); }
   margin-top: 6px;
 }
 .hero-credits {
-  margin-top: 56px;
-  padding-top: 28px;
+  margin-top: 44px;
+  padding-top: 24px;
   border-top: 1px solid var(--border);
   font-size: 11px;
   color: var(--text-faint);
@@ -168,6 +165,7 @@ section {
   max-width: var(--max-w);
   margin: 0 auto;
 }
+#programming { padding-top: 64px; }
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -195,6 +193,72 @@ section {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+/* PROGRAMMING BLOCK */
+.programming-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .programming-wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+.programming-eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  padding-top: 12px;
+  border-top: 1px solid var(--accent);
+  display: inline-block;
+}
+.programming-body h3 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.programming-body h3 em { font-style: italic; color: var(--accent); }
+.programming-body p {
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.6;
+  color: var(--text);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.programming-body p:last-child { color: var(--text-dim); }
+.programming-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 56px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.programming-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat-num em { color: var(--accent); font-style: normal; }
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-faint);
+}
+
 .reels-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -279,13 +343,8 @@ section {
   font-weight: 300;
   color: var(--text);
 }
-.about-body p strong {
-  color: var(--text);
-  font-weight: 500;
-}
-.about-body p em {
-  font-style: italic;
-}
+.about-body p strong { color: var(--text); font-weight: 500; }
+.about-body p em { font-style: italic; }
 .about-body p:last-of-type {
   color: var(--text-dim);
   font-size: 14px;
@@ -305,11 +364,7 @@ section {
   color: var(--text-faint);
   margin-bottom: 28px;
 }
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+.experience-list { display: flex; flex-direction: column; gap: 18px; }
 .experience-row {
   display: flex;
   justify-content: space-between;
@@ -384,9 +439,9 @@ footer {
 <nav id="nav">
   <a href="#top" class="brand">Jordan Lane<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#reels">Sizzles</a></li>
+    <li><a href="#programming">Programming</a></li>
+    <li><a href="#reels">Programs</a></li>
     <li><a href="#poosh">Poosh</a></li>
-    <li><a href="#photos">Photo</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -395,10 +450,10 @@ footer {
 <header class="hero" id="top">
   <div class="hero-eyebrow">Selected Work · 2021 — 2026</div>
   <h1>Stories that <em>move</em>.</h1>
-  <p class="hero-tagline">And the systems that <em>move them</em> — sizzle reels, brand films, and social cuts for entertainment, sports, and global brands.</p>
+  <p class="hero-tagline">Content and programming for entertainment, sports, and brand — series, slates, and the systems behind them.</p>
   <div class="hero-meta">
     <div>Based in <strong>Philadelphia</strong></div>
-    <div>Discipline <strong>Production · Digital Asset Management · Media Asset Management</strong></div>
+    <div>Discipline <strong>Programming · Content Production · Digital Asset Management</strong></div>
   </div>
   <p class="hero-credits">
     Productions featuring
@@ -410,47 +465,76 @@ footer {
   </p>
 </header>
 
+<section id="programming">
+  <div class="section-header reveal">
+    <h2><em>Programming</em>.</h2>
+    <div class="section-num">01 / Platform</div>
+  </div>
+  <div class="programming-wrap">
+    <div class="reveal"><div class="programming-eyebrow">Ongoing · Comcast NBCUniversal</div></div>
+    <div class="programming-body reveal">
+      <h3>A quarterly speaker series, <em>four years running</em>.</h3>
+      <p>Built and programmed inside Comcast NBCUniversal HQ — a recurring platform for thought leadership, employee audience development, and cross-business connection. Every quarter, a new slate. Every slate, a new conversation.</p>
+      <p>The work is programming and production in equal measure: booking marquee talent, shaping the editorial arc across the year, and producing the live event and the content that carries it beyond the room. Consistency is the point — a program you can plan around, not a one-off.</p>
+      <div class="programming-stats">
+        <div class="programming-stat">
+          <div class="stat-num"><em>4</em> yrs</div>
+          <div class="stat-label">Consecutive Cadence</div>
+        </div>
+        <div class="programming-stat">
+          <div class="stat-num"><em>16+</em></div>
+          <div class="stat-label">Programs Produced</div>
+        </div>
+        <div class="programming-stat">
+          <div class="stat-num"><em>5M+</em></div>
+          <div class="stat-label">Total Views</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="reels">
   <div class="section-header reveal">
-    <h2>Comcast <em>Sizzles</em></h2>
-    <div class="section-num">01 / Work</div>
+    <h2>Selected <em>Programs</em></h2>
+    <div class="section-num">02 / Work</div>
   </div>
   <div class="reels-grid">
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190464146" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">Wicked — Pt. 1</div><div class="reel-tag">Universal</div></div>
+      <div class="reel-meta"><div class="reel-title">Wicked — Pt. 1</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190482582" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">Wicked — For Good</div><div class="reel-tag">Universal</div></div>
+      <div class="reel-meta"><div class="reel-title">Wicked — For Good</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190476313" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">NBA on NBC &amp; Peacock</div><div class="reel-tag">NBC Sports</div></div>
+      <div class="reel-meta"><div class="reel-title">NBA on NBC &amp; Peacock</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190466038" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">Paris Olympics 2024</div><div class="reel-tag">Comcast</div></div>
+      <div class="reel-meta"><div class="reel-title">Paris Olympics 2024</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190480503" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">WWE × Bianca Belair</div><div class="reel-tag">WWE</div></div>
+      <div class="reel-meta"><div class="reel-title">WWE × Bianca Belair</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190482407" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">VOICES — Comcast TEDx</div><div class="reel-tag">Comcast</div></div>
+      <div class="reel-meta"><div class="reel-title">VOICES — Comcast TEDx</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190463711" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. I</div><div class="reel-tag">Comcast</div></div>
+      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. I</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190464017" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. II</div><div class="reel-tag">Comcast</div></div>
+      <div class="reel-meta"><div class="reel-title">AI at Comcast — Vol. II</div><div class="reel-tag">Co-Produced</div></div>
     </div>
     <div class="reel reveal">
       <div class="reel-frame"><iframe src="https://player.vimeo.com/video/1190465981" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="reel-meta"><div class="reel-title">Comcast Converge</div><div class="reel-tag">Comcast</div></div>
+      <div class="reel-meta"><div class="reel-title">Comcast Converge</div><div class="reel-tag">Co-Produced</div></div>
     </div>
   </div>
 </section>
@@ -458,18 +542,18 @@ footer {
 <section id="poosh">
   <div class="section-header reveal">
     <h2><em>Poosh</em>.</h2>
-    <div class="section-num">02 / Brand</div>
+    <div class="section-num">03 / Brand</div>
   </div>
   <div class="featured-reel reveal">
     <div class="reel-frame"><iframe src="https://www.youtube.com/embed/Naq6X0f5GC4" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <div class="reel-meta"><div class="reel-title">Poosh × Kourtney Kardashian</div><div class="reel-tag">3.3M+ views</div></div>
+    <div class="reel-meta"><div class="reel-title">Poosh × Kourtney Kardashian</div><div class="reel-tag">Social Editorial</div></div>
   </div>
 </section>
 
 <section id="photos">
   <div class="section-header reveal">
     <h2>From the <em>set</em>.</h2>
-    <div class="section-num">03 / Photo</div>
+    <div class="section-num">04 / Photo</div>
   </div>
   <div class="feature-photo reveal">
     <img src="images/1000-0330-lowres.jpg" alt="On set" />
@@ -479,23 +563,23 @@ footer {
 <section id="about">
   <div class="section-header reveal">
     <h2><em>About</em>.</h2>
-    <div class="section-num">04 / Bio</div>
+    <div class="section-num">05 / Bio</div>
   </div>
   <div class="about-wrap">
     <div class="reveal"><div class="about-label">Who · What · Why</div></div>
     <div class="about-body reveal">
-      <p>Jordan Lane is a creative content producer in Philadelphia. Currently at Comcast NBCUniversal, where the work spans editing, production, and the systems that organize media at scale.</p>
-      <p>Recent productions include the company's internal TEDx-style speaker series, NBC Sports campaigns for the NBA and Paris Olympics, Universal's <em>Wicked</em>, and WWE × Bianca Belair. Productions have featured <strong>Barack Obama, Simone Biles, Jalen Hurts, and Bianca Belair.</strong></p>
-      <p>Earlier work includes editing for Kourtney Kardashian's <em>Poosh</em> — short-form pieces with <strong>3.3M+ views</strong> — and freelance roles at Saktii, TLC, Big Lots, and CreatorsTV.</p>
-      <p>Alongside production: <strong>1M+ assets</strong> across Iconik and LucidLink, and a custom AI-tagged metadata framework that reduced team search time by <strong>20%</strong>.</p>
-      <p>Ohio State · B.S. Moving Image Production · Dean's List 2019–2022 · Charles Newirth Scholar</p>
+      <p>Jordan Lane is a content and programming producer in Philadelphia.</p>
+      <p>At Comcast NBCUniversal, he programs a quarterly speaker series, co-produces content across the enterprise, and architects the digital asset systems that keep the work discoverable at scale.</p>
+      <p>The through-line is programming — consistent cadence, marquee talent, audience development, and a slate that ties back to the business. The craft (editing, production, systems) is what makes the programming possible.</p>
+      <p>Earlier: editing for Kourtney Kardashian's <em>Poosh</em>, plus roles at Saktii, TLC, Big Lots, and CreatorsTV.</p>
+      <p>Ohio State · B.S. Moving Image Production · Dean's List · Charles Newirth Scholar</p>
 
       <div class="experience">
         <div class="experience-label">Experience</div>
         <div class="experience-list">
           <div class="experience-row">
             <div class="experience-company">Comcast NBCUniversal</div>
-            <div class="experience-role">Production Assistant · Philadelphia</div>
+            <div class="experience-role">Production Assistant · Content &amp; Programming · Philadelphia</div>
             <div class="experience-dates">2022 — Present</div>
           </div>
           <div class="experience-row">
